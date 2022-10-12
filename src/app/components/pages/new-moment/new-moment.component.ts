@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewMomentComponent implements OnInit {
 
-  btnText:string = "Share"
+  btnText:string = "Share right now"
 
   constructor() { }
 
