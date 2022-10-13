@@ -36,22 +36,40 @@ form {
 
 .form-group input,
 .form-group textarea {
-    padding: 0.6em;
+    padding: 0.9em;
     color: #777;
     font-size: 0.8em;
+    border-radius: 0.5em;
+    border: transparent;
+    background-color: #efefef;
+    outline: #efefef;
+}
+
+.form-group textarea {
+    height: 110px;
+    resize: none;
 }
 
 input[type="submit"] {
-    background-color: #efefef;
+    background-color: #dec129;
     border: 1px solid transparent;
     border-radius: 0.3em;
     padding: 0.6em 1em;
-    font-size: 1.1em;
+    font-size: 0.9em;
     cursor: pointer;
     transition: 0.4s;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
 input[type="submit"]:hover {
-color: #dec129;
-border-color: #dec129;
+    background-color: #c5a401;
+}
+
+.validation-error p {
+    color: #dc3545;
+    margin-top: .4em;
+    border-left: 3px solid #dc3545;
+    padding-left: .2em;
+    font-size: 12px;
 }
