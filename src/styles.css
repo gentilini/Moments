@@ -41,8 +41,8 @@ form {
     font-size: 0.8em;
     border-radius: 0.5em;
     border: transparent;
-    background-color: #efefef;
-    outline: #efefef;
+    background-color: #f5f5f5;
+    outline: #f5f5f5;
 }
 
 .form-group textarea {
