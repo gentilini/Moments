@@ -1,3 +1,5 @@
+import { MomentService } from './../../../services/moment.service';
+import { Moment } from './../../../moment';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,13 +11,22 @@ export class NewMomentComponent implements OnInit {
 
   btnText:string = "Share right now"
 
-  constructor() { }
+  constructor(private momentService: MomentService) { }
 
   ngOnInit(): void {
   }
 
-  createHandler(event: any) {
-    console.log("deu boa")
+  async createHandler(moment: Moment) {
+    const formData = new FormData();
+
+    formData.append("title", moment.title);
+    formData.append("description", moment.description);
+
+    if (moment.image) {
+      formData.append("image", moment.image);
+    }
+
+    await this.momentService.createMoment(formData).subscribe();
   }
 
 }
